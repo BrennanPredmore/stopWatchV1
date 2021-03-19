@@ -7,11 +7,13 @@ import './index.css';
 const element = <FontAwesomeIcon icon={faClock} />;
 
 const App = () => {
-  const [timer, setTimer] = useState(3595);
+  const [timer, setTimer] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const increment = useRef(null);
 
+  console.log(timer);
+  
   const handleStart = () => {
     setIsActive(true);
     setIsPaused(true);
